@@ -3,193 +3,668 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>ZYLO-Furn – Premium Furniture</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles/style.css" />
 </head>
+
 <body>
 
+  <!-- ===================================================== -->
   <!-- NAVIGATION -->
+  <!-- ===================================================== -->
+
   <header class="header" id="header">
+
     <nav class="nav">
-      <a href="#home" class="nav-logo">ZYLO<span>Furn</span></a>
+
+      <a href="#home" class="nav-logo">
+        ZYLO<span>Furn</span>
+      </a>
+
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-view-link="home">Home</a></li>
+        <li><a href="#products" data-view-link="products">Products</a></li>
+        <li><a href="#about" data-view-link="about">About</a></li>
+        <li><a href="#contact" data-view-link="contact">Contact</a></li>
       </ul>
+
       <div class="nav-actions">
-        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+
+        <!-- Cart -->
+        <button
+          class="cart-btn"
+          id="cartBtn"
+          aria-label="Open cart"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
             <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
             <line x1="3" y1="6" x2="21" y2="6"/>
             <path d="M16 10a4 4 0 01-8 0"/>
           </svg>
+
           <span class="cart-count" id="cartCount">0</span>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
+
+        <!-- Mobile Menu -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+
       </div>
+
     </nav>
+
   </header>
 
+  <!-- ===================================================== -->
   <!-- MOBILE MENU -->
+  <!-- ===================================================== -->
+
   <div class="mobile-menu" id="mobileMenu">
+
     <ul>
-      <li><a href="#home" class="mobile-link">Home</a></li>
-      <li><a href="#products" class="mobile-link">Products</a></li>
-      <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="#home" data-view-link="home">Home</a></li>
+      <li><a href="#products" data-view-link="products">Products</a></li>
+      <li><a href="#about" data-view-link="about">About</a></li>
+      <li><a href="#contact" data-view-link="contact">Contact</a></li>
     </ul>
+
   </div>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&h=900&fit=crop&q=85" alt="Hero sofa" class="hero-img" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">New Collection 2025</p>
-      <h1 class="hero-title">Furniture that<br /><em>Everyone Loves</em></h1>
-      <p class="hero-sub">Crafted for comfort. Designed to last. Delivered to your door.</p>
-      <div class="hero-ctas">
-        <a href="#products" class="btn btn-primary">Shop Now</a>
-        <a href="#about" class="btn btn-ghost">Explore</a>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
+  <!-- ===================================================== -->
+  <!-- APP VIEWS -->
+  <!-- ===================================================== -->
 
-  <!-- ABOUT STRIP -->
-  <section class="about-strip" id="about">
-    <div class="container about-grid">
-      <div class="about-text reveal">
-        <p class="section-eyebrow">Who we are</p>
-        <h2 class="section-title">South African Craftsmanship<br />for the Modern Home</h2>
-        <p>ZYLO-Furn is a premium furniture brand rooted in Johannesburg. We design and source furniture that balances elegance with everyday functionality — from cosy living rooms to executive home offices.</p>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
-      </div>
-      <div class="about-features reveal">
-        <div class="feature-card">
-          <span class="feature-icon">🚚</span>
-          <h4>Free Delivery</h4>
-          <p>Nationwide free delivery on all orders over R5,000.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🔧</span>
-          <h4>Assembly</h4>
-          <p>Professional in-home assembly service available.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🎨</span>
-          <h4>Design Consult</h4>
-          <p>Free interior design consultation with every purchase.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🛡️</span>
-          <h4>5-Year Warranty</h4>
-          <p>All products backed by our quality guarantee.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main id="appViews">
 
-  <!-- PRODUCTS -->
-  <section class="products-section" id="products">
-    <div class="container">
-      <div class="products-header reveal">
-        <div class="products-header-text">
-          <p class="section-eyebrow">Our Collection</p>
-          <h2 class="section-title">Featured Products</h2>
+    <!-- ================================================= -->
+    <!-- HOME VIEW -->
+    <!-- ================================================= -->
+
+    <section
+      data-view="home"
+      class="view view-active"
+      id="home"
+    >
+
+      <!-- HERO -->
+      <section class="hero">
+
+        <div class="hero-bg">
+
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&h=900&fit=crop&q=85"
+            alt="Luxury sofa"
+            class="hero-img"
+          />
+
+          <div class="hero-overlay"></div>
+
         </div>
-        <div class="view-toggle">
-          <button class="toggle-btn active" id="gridViewBtn" aria-label="Grid view" title="Grid view">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/>
-              <rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/>
-            </svg>
+
+        <div class="hero-content">
+
+          <p class="hero-eyebrow">
+            New Collection 2025
+          </p>
+
+          <h1 class="hero-title">
+            Furniture that<br />
+            <em>Everyone Loves</em>
+          </h1>
+
+          <p class="hero-sub">
+            Crafted for comfort. Designed to last.
+            Delivered to your door.
+          </p>
+
+          <div class="hero-ctas">
+
+            <a
+              href="#products"
+              data-view-link="products"
+              class="btn btn-primary"
+            >
+              Shop Now
+            </a>
+
+            <a
+              href="#about"
+              data-view-link="about"
+              class="btn btn-ghost"
+            >
+              Explore
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-scroll-hint">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- PRODUCTS VIEW -->
+    <!-- ================================================= -->
+
+    <section
+      data-view="products"
+      class="view page-products"
+      id="products"
+    >
+
+      <div class="page-hero-bar">
+
+        <div class="container">
+
+          <div>
+            <p class="section-eyebrow">Our Collection</p>
+
+            <h1>
+              Premium <em>Furniture</em>
+            </h1>
+
+            <p>
+              Crafted for modern South African homes.
+            </p>
+          </div>
+
+          <div class="page-products-count">
+            Collection
+          </div>
+
+        </div>
+
+      </div>
+
+      <section class="products-section">
+
+        <div class="container">
+
+          <!-- PRODUCTS RENDER HERE -->
+          <div
+            class="products-grid"
+            id="productsGrid"
+          ></div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ABOUT VIEW -->
+    <!-- ================================================= -->
+
+    <section
+      data-view="about"
+      class="view page-about"
+      id="about"
+    >
+
+      <!-- HERO -->
+      <section class="about-page-hero">
+
+        <img
+          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1600&h=900&fit=crop&q=85"
+          alt="About ZYLO Furn"
+        />
+
+        <div class="about-page-hero-overlay"></div>
+
+        <div class="about-page-hero-content">
+          <h1>
+            Built Around <em>Comfort</em>
+          </h1>
+        </div>
+
+      </section>
+
+      <!-- CONTENT -->
+      <section class="about-page-intro">
+
+        <div class="container about-grid">
+
+          <div class="about-text">
+
+            <p class="section-eyebrow">
+              About Us
+            </p>
+
+            <h2 class="section-title">
+              Luxury Furniture for the Modern Home
+            </h2>
+
+            <p>
+              ZYLO-Furn creates timeless furniture
+              pieces inspired by modern South African living.
+            </p>
+
+            <p>
+              We blend comfort, elegance and quality
+              craftsmanship into every design.
+            </p>
+
+            <p>
+              From curated living spaces to executive office
+              collections, our mission is to create furniture
+              people genuinely love living with.
+            </p>
+
+          </div>
+
+          <div class="about-features">
+
+            <div class="feature-card">
+              <span class="feature-icon">🚚</span>
+              <h4>Nationwide Delivery</h4>
+              <p>
+                Fast and reliable delivery anywhere in South Africa.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <span class="feature-icon">🛠️</span>
+              <h4>Premium Build</h4>
+              <p>
+                Crafted with durable materials and modern finishes.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <span class="feature-icon">🏡</span>
+              <h4>Modern Living</h4>
+              <p>
+                Designed to fit contemporary South African homes.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <span class="feature-icon">⭐</span>
+              <h4>Trusted Quality</h4>
+              <p>
+                Furniture backed by quality assurance and care.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- CONTACT VIEW -->
+    <!-- ================================================= -->
+
+    <section
+      data-view="contact"
+      class="view page-contact"
+      id="contact"
+    >
+
+      <footer class="footer">
+
+        <div class="container footer-grid">
+
+          <!-- Brand -->
+          <div class="footer-brand">
+
+            <a href="#home" class="nav-logo">
+              ZYLO<span>Furn</span>
+            </a>
+
+            <p>
+              Your trusted partner for premium furniture
+              in South Africa.
+            </p>
+
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">Ig</a>
+              <a href="#" aria-label="Facebook">Fb</a>
+              <a href="#" aria-label="Pinterest">Pt</a>
+            </div>
+
+          </div>
+
+          <!-- Links -->
+          <div class="footer-col">
+
+            <h4>Quick Links</h4>
+
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-col">
+
+            <h4>Contact</h4>
+
+            <p>+27 11 123 4567</p>
+            <p>info@zylo-furn.co.za</p>
+
+            <p>
+              123 Furniture Street,<br />
+              Johannesburg
+            </p>
+
+          </div>
+
+          <!-- Hours -->
+          <div class="footer-col">
+
+            <h4>Hours</h4>
+
+            <p>Mon – Fri: 09:00 – 18:00</p>
+            <p>Sat: 09:00 – 15:00</p>
+            <p>Sun: Closed</p>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 ZYLO-Furn. All rights reserved.</p>
+        </div>
+
+      </footer>
+
+    </section>
+
+  </main>
+
+  <!-- ===================================================== -->
+  <!-- QUICK VIEW MODAL -->
+  <!-- ===================================================== -->
+
+  <div
+    class="modal-overlay"
+    id="quickViewModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="qvTitle"
+  >
+
+    <div class="modal modal-product">
+
+      <button
+        class="modal-close"
+        data-close="quickViewModal"
+        aria-label="Close"
+      >
+        &times;
+      </button>
+
+      <div class="modal-product-body">
+
+        <div class="modal-gallery">
+          <img id="qvImage" src="" alt="" />
+        </div>
+
+        <div class="modal-product-details">
+
+          <span
+            class="product-category"
+            id="qvCategory"
+          ></span>
+
+          <h2 id="qvTitle"></h2>
+
+          <p class="modal-price" id="qvPrice"></p>
+
+          <p class="modal-desc" id="qvDesc"></p>
+
+          <ul
+            class="modal-specs"
+            id="qvSpecs"
+          ></ul>
+
+          <button
+            class="btn btn-primary modal-add-cart"
+            id="qvAddCart"
+          >
+            Add to Cart
           </button>
-          <button class="toggle-btn" id="listViewBtn" aria-label="List view" title="List view">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/>
-              <rect x="3" y="16" width="18" height="4" rx="1"/>
-            </svg>
-          </button>
+
         </div>
+
       </div>
 
-      <!-- Loading state -->
-      <div class="products-loading" id="productsLoading">
-        <div class="skeleton-grid">
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- CART MODAL -->
+  <!-- ===================================================== -->
+
+  <div
+    class="modal-overlay"
+    id="cartModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cartModalTitle"
+  >
+
+    <div class="modal modal-cart">
+
+      <button
+        class="modal-close"
+        data-close="cartModal"
+        aria-label="Close"
+      >
+        &times;
+      </button>
+
+      <h2 id="cartModalTitle">
+        Your Cart
+      </h2>
+
+      <div
+        class="cart-items"
+        id="cartItems"
+      ></div>
+
+      <div class="cart-footer">
+
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">R 0</strong>
         </div>
+
+        <button
+          class="btn btn-primary"
+          id="checkoutBtn"
+        >
+          Checkout
+        </button>
+
       </div>
 
-      <!-- Products grid — populated by JS -->
-      <div class="products-grid" id="productsGrid" style="display:none"></div>
-
-      <!-- Error state -->
-      <div class="products-error" id="productsError" style="display:none">
-        <p>⚠️ Could not load products. Showing demo catalogue.</p>
-      </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="#home" class="nav-logo">ZYLO<span>Furn</span></a>
-        <p>Your trusted partner for premium furniture in South Africa.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram">Ig</a>
-          <a href="#" aria-label="Facebook">Fb</a>
-          <a href="#" aria-label="Pinterest">Pt</a>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- CHECKOUT MODAL -->
+  <!-- ===================================================== -->
+
+  <div
+    class="modal-overlay"
+    id="checkoutModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="checkoutTitle"
+  >
+
+    <div class="modal modal-checkout">
+
+      <button
+        class="modal-close"
+        data-close="checkoutModal"
+        aria-label="Close"
+      >
+        &times;
+      </button>
+
+      <h2 id="checkoutTitle">
+        Complete Your Order
+      </h2>
+
+      <div class="checkout-body">
+
+        <div class="checkout-field">
+          <label for="co-name">Full Name</label>
+          <input
+            type="text"
+            id="co-name"
+            placeholder="Jane Smith"
+          />
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>+27 11 123 4567</p>
-        <p>info@zylo-furn.co.za</p>
-        <p>123 Furniture Street,<br/>Johannesburg</p>
-      </div>
-      <div class="footer-col">
-        <h4>Hours</h4>
-        <p>Mon – Fri: 09:00 – 18:00</p>
-        <p>Sat: 09:00 – 15:00</p>
-        <p>Sun: Closed</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 ZYLO-Furn. All rights reserved.</p>
-    </div>
-  </footer>
 
-  <!-- Toast -->
+        <div class="checkout-field">
+          <label for="co-email">Email</label>
+          <input
+            type="email"
+            id="co-email"
+            placeholder="jane@example.com"
+          />
+        </div>
+
+        <div class="checkout-field">
+          <label for="co-phone">Phone</label>
+          <input
+            type="tel"
+            id="co-phone"
+            placeholder="+27 71 000 0000"
+          />
+        </div>
+
+        <div class="checkout-field">
+          <label for="co-address">
+            Delivery Address
+          </label>
+
+          <textarea
+            id="co-address"
+            rows="3"
+            placeholder="123 Main Street, Johannesburg"
+          ></textarea>
+        </div>
+
+        <div
+          class="checkout-summary"
+          id="checkoutSummary"
+        ></div>
+
+        <button
+          class="btn btn-primary"
+          id="submitOrderBtn"
+        >
+          Submit Order
+        </button>
+
+        <p class="checkout-note">
+          Orders are submitted to our team and confirmed
+          within 24 hours.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- CONFIRMATION MODAL -->
+  <!-- ===================================================== -->
+
+  <div
+    class="modal-overlay"
+    id="confirmModal"
+    role="dialog"
+    aria-modal="true"
+  >
+
+    <div class="modal modal-confirm">
+
+      <div class="confirm-icon">✓</div>
+
+      <h2>Order Received!</h2>
+
+      <p>
+        Thank you for your order.
+        Our team will contact you within
+        24 hours to confirm delivery details.
+      </p>
+
+      <button
+        class="btn btn-primary"
+        data-close="confirmModal"
+      >
+        Done
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TOAST -->
+  <!-- ===================================================== -->
+
   <div class="toast" id="toast"></div>
 
-  <!-- JS (modals built entirely in JS) -->
-  <script src="scripts/script.js"></script>
+  <!-- ===================================================== -->
+  <!-- SCRIPTS -->
+  <!-- ===================================================== -->
+
+  <script src="scripts/config.js"></script>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/whatsapp.js"></script>
+  <script src="scripts/cart.js"></script>
+  <script src="scripts/products.js"></script>
+  <script src="scripts/modals.js"></script>
+  <script src="scripts/ui.js"></script>
+
 </body>
 </html>

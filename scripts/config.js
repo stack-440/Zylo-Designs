@@ -19,7 +19,7 @@
      e.g. South Africa +27 83 123 4567 → "27831234567"
 ───────────────────────────────────────────────────────────── */
 const CONFIG = {
-  SHEETS_CSV_URL: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgPoKqP5QuVzXk1eN071EI1TivfyF4s3GJQVjAaXQDAh2lP6j-2YdtJAUlMDr6MHyR7-urI256cnh6/pub?output=csv',
+  SHEETS_CSV_URL: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgPoKqP5QuVzXk1eN071EI1TivfyF4s3GJQVjAaXQDAh2lP6j-2YdtJAUlMDr6MHyR7-urI256cnh6/pub?gid=857510925&single=true&output=csv',
   WHATSAPP_NUMBER: '27717090240',   // ← replace with your number
 };
 
